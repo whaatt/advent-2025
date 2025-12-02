@@ -1,0 +1,3 @@
+*.txt
+.mypy_cache
+target/

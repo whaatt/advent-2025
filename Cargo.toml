@@ -1,0 +1,14 @@
+[package]
+name = "advent-2025"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "shared"
+path = "./shared.rs"
+
+[[bin]]
+name = "1"
+path = "./1.rs"
+
+[dependencies]
