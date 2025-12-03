@@ -7,8 +7,8 @@ fn main() {
     let result = get_rotations(MODULUS);
     let rotations = match result {
         Ok(val) => val,
-        Err(e) => {
-            eprintln!("Error: {}", e);
+        Err(error) => {
+            eprintln!("error: {}", error);
             return;
         }
     };
@@ -81,11 +81,13 @@ fn get_rotations(modulus: i32) -> Result<Vec<Rotation>, std::string::String> {
     let lines = read_lines("./1.txt").map_err(|error| error.to_string())?;
     for line in lines.map_while(Result::ok) {
         let (rotation, clicks_str) = line.split_at(1);
-        let clicks: i32 = clicks_str.parse().expect("Invalid number");
+        let clicks: i32 = clicks_str
+            .parse()
+            .map_err(|error| format!("invalid number: {}", error))?;
         match rotation {
             "R" => rotations.push(Rotation::R { modulus, clicks }),
             "L" => rotations.push(Rotation::L { modulus, clicks }),
-            _ => return Err(format!("Invalid rotation character: {}", rotation)),
+            _ => return Err(format!("invalid rotation character: {}", rotation)),
         }
     }
     Ok(rotations)

@@ -11,4 +11,8 @@ path = "./shared.rs"
 name = "1"
 path = "./1.rs"
 
+[[bin]]
+name = "2"
+path = "./2.rs"
+
 [dependencies]
