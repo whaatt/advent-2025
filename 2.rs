@@ -156,6 +156,7 @@ fn parse_ranges() -> Result<Vec<Range>, std::string::String> {
             }
         }
     }
+
     Ok(ranges)
 }
 
