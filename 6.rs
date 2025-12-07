@@ -62,7 +62,7 @@ const MULTIPLY: (i64, fn(i64, i64) -> i64) = (1, |a, b| a * b);
 #[allow(clippy::type_complexity)]
 fn parse_problems() -> anyhow::Result<Vec<Problem>> {
     let lines_buffer: std::io::Lines<std::io::BufReader<std::fs::File>> =
-        shared::read_lines("6.txt")?;
+        shared::read_lines("./6.txt")?;
     let lines: Vec<String> = lines_buffer.map_while(Result::ok).collect::<Vec<String>>();
     let mut problems: Vec<Problem> = Vec::new();
     let operations = lines
