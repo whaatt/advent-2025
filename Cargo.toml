@@ -39,5 +39,9 @@ path = "./7.rs"
 name = "8"
 path = "./8.rs"
 
+[[bin]]
+name = "9"
+path = "./9.rs"
+
 [dependencies]
 anyhow = "1.0.100"
