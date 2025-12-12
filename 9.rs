@@ -1,6 +1,5 @@
-use std::cmp::{max, min};
-
 use anyhow::Context;
+use std::cmp::{max, min};
 
 fn main() {
     let coordinates = match parse_coordinates() {

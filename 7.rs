@@ -1,6 +1,5 @@
-use std::collections::HashMap;
-
 use anyhow::Context;
+use std::collections::HashMap;
 
 fn main() {
     let (rows, columns, grid) = match parse_grid() {

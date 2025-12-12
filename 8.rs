@@ -1,6 +1,5 @@
-use std::{cmp::Ordering, collections::HashMap};
-
 use anyhow::Context;
+use std::{cmp::Ordering, collections::HashMap};
 
 fn main() {
     let coordinates = match parse_coordinates() {
